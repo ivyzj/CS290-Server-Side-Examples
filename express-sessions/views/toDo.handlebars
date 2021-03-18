@@ -4,6 +4,9 @@
   <input type="text" name="name" id="toDoName">
   <input type="submit" name="Add Item" value="Add Item">
 </form>
+{{!-- You will notice that the form does not have an action. This means 
+that the form will submit to the current URL. --}}
+
 {{#if toDo}}
 <ul>
   {{#each toDo}}
@@ -17,3 +20,9 @@
   {{/each}}
 </ul>
 {{/if}}
+{{!-- We use a form here to allow the user to mark the item as 'done'.
+That form has a hidden input which is used to store the id of the 
+to-do item. Hidden inputs are used to store data the user does not 
+care about (note the user can find out and change the value here 
+super easily) but that the form still needs. This is how we know 
+which item to delete from the list when we submit the form. --}}

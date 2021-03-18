@@ -33,6 +33,7 @@ app.post('/',function(req,res){
     req.session.name = req.body.name;
     req.session.toDo = [];
     req.session.curId = 0;
+    console.log(req.body.name);
   }
 
   //If there is no session, go to the main page.
